@@ -1,7 +1,86 @@
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<display-name>Servlet Examples</display-name>
+	<filter>
+		<filter-name>LogFilter</filter-name>
+		<display-name>LogFilter</display-name>
+		<description></description>
+		<filter-class>com.abhi.edu.LogFilter</filter-class>
+		<init-param>
+			<param-name>test-param</param-name>
+			<param-value>Initialization Paramter</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>AuthenFilter</filter-name>
+		<display-name>AuthenFilter</display-name>
+		<description></description>
+		<filter-class>com.abhi.edu.AuthenFilter</filter-class>
+	</filter>
+	<servlet>
+		<servlet-name>HelloWorld</servlet-name>
+		<servlet-class>com.abhi.edu.HelloWorld</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ErrorHandler</servlet-name>
+		<display-name>ErrorHandler</display-name>
+		<description></description>
+		<servlet-class>com.abhi.edu.ErrorHandler</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ReadCookies</servlet-name>
+		<display-name>ReadCookies</display-name>
+		<description></description>
+		<servlet-class>com.abhi.edu.ReadCookies</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteCookies</servlet-name>
+		<display-name>DeleteCookies</display-name>
+		<description></description>
+		<servlet-class>com.abhi.edu.DeleteCookies</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SessionTrack</servlet-name>
+		<display-name>SessionTrack</display-name>
+		<description></description>
+		<servlet-class>com.abhi.edu.SessionTrack</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloWorld</servlet-name>
+		<url-pattern>/HelloWorld</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ErrorHandler</servlet-name>
+		<url-pattern>/ErrorHandler</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReadCookies</servlet-name>
+		<url-pattern>/ReadCookies</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteCookies</servlet-name>
+		<url-pattern>/DeleteCookies</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SessionTrack</servlet-name>
+		<url-pattern>/SessionTrack</url-pattern>
+	</servlet-mapping>
+	<filter-mapping>
+		<filter-name>LogFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>AuthenFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/ErrorHandler</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/ErrorHandler</location>
+	</error-page>
 </web-app>
