@@ -22,7 +22,7 @@ public class SessionTrack extends HttpServlet {
      */
     public SessionTrack() {
         super();
-        // TODO Auto-generated constructor stub
+        System.out.println(this.getClass().getName() + " Servlet has been loaded");
     }
 
 	/**

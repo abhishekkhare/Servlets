@@ -25,6 +25,7 @@ public class TestServletContextAttributeListener extends HttpServlet {
 	 */
 	public TestServletContextAttributeListener() {
 		super();
+		System.out.println(this.getClass().getName() + " Servlet has been loaded");
 	}
 
 	/**

@@ -74,6 +74,20 @@
 		<description></description>
 		<servlet-class>com.abhi.edu.TestHttpSessionListenerAndEvents</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>FirstServlet</servlet-name>
+		<display-name>FirstServlet</display-name>
+		<description></description>
+		<servlet-class>com.abhi.edu.FirstServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>  
+	</servlet>
+	<servlet>
+		<servlet-name>SecondServlet</servlet-name>
+		<display-name>SecondServlet</display-name>
+		<description></description>
+		<servlet-class>com.abhi.edu.SecondServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>  
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>HelloWorld</servlet-name>
 		<url-pattern>/HelloWorld</url-pattern>
@@ -101,6 +115,14 @@
 	<servlet-mapping>
 		<servlet-name>TestHttpSessionListenerAndEvents</servlet-name>
 		<url-pattern>/TestHttpSessionListenerAndEvents</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FirstServlet</servlet-name>
+		<url-pattern>/FirstServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SecondServlet</servlet-name>
+		<url-pattern>/SecondServlet</url-pattern>
 	</servlet-mapping>
 	<filter-mapping>
 		<filter-name>LogFilter</filter-name>

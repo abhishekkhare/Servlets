@@ -31,7 +31,7 @@ public class DeleteCookies extends HttpServlet {
 	 */
 	public DeleteCookies() {
 		super();
-		// TODO Auto-generated constructor stub
+		System.out.println(this.getClass().getName() + " Servlet has been loaded");
 	}
 
 	/**

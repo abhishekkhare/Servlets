@@ -21,6 +21,7 @@ public class ErrorHandler extends HttpServlet {
      */
     public ErrorHandler() {
         super();
+        System.out.println(this.getClass().getName() + " Servlet has been loaded");
     }
 
 	/**
